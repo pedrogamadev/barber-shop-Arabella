@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# As’ Arabella .Dev — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page conceito construída com React + Vite (TypeScript) para a barbearia fictícia **As’ Arabella .Dev**. O projeto destaca uma experiência premium com navegação fluida, agenda online e seções personalizadas para apresentar a marca a potenciais clientes.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React 19](https://react.dev/) com [Vite](https://vite.dev/) e TypeScript (SWC)
+- [Twind](https://twind.style/) para utilitários de estilo com filosofia Tailwind
+- Layout responsivo com componentes modulares e assets personalizados
 
-## React Compiler
+## Pré-requisitos
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Node.js 18 ou superior
+- npm 10 (o arquivo `.npmrc` já habilita o modo `legacy-peer-deps` para compatibilidade com o Twind)
 
-## Expanding the ESLint configuration
+## Como rodar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependências
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Ambiente de desenvolvimento
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Build de produção
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Pré-visualizar a build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estrutura de pastas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+  assets/           # Imagens conceituais utilizadas na landing page
+  components/       # Componentes por seção (Hero, Serviços, Equipe, etc.)
+  App.tsx           # Montagem da página principal
+  index.css         # Estilos globais e fontes
+  main.tsx          # Entrada da aplicação com o provedor do Twind
+```
+
+## Deploy na Vercel
+
+1. Faça fork/clonagem deste repositório e conecte-o à Vercel.
+2. Defina o comando de build padrão (`npm run build`) e a pasta de saída `dist`.
+3. As variáveis de ambiente não são necessárias neste protótipo.
+
+## Personalização
+
+- Substitua as imagens em `src/assets` por fotos reais da barbearia.
+- Ajuste textos, preços e depoimentos diretamente nos componentes correspondentes.
+- Integre o formulário de agendamento a um backend ou serviço de terceiros quando estiver pronto para produção.
+
+## Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo [LICENSE](../LICENSE) para mais detalhes.
