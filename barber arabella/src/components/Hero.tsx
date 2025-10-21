@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import heroImage from '../assets/hero.png'
+import heroImage from '../assets/hero.avif'
 
 const Hero: FC = () => (
   <section
