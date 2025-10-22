@@ -25,7 +25,7 @@ const Header: FC = () => {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-gold/20 bg-night/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#inicio"
@@ -34,12 +34,12 @@ const Header: FC = () => {
           <img
             src={logo}
             alt="Logotipo As’ Arabella .Dev"
-            className="h-12 w-12 rounded-full border border-brand-gold/40 object-cover shadow-glow"
+            className="h-12 w-12 rounded-full border border-brand-gold/50 object-cover shadow-glow"
           />
           <span className="sr-only">As’ Arabella .Dev</span>
         </a>
 
-        <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-200 md:flex">
+        <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.35em] text-brand-sand/80 md:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -56,7 +56,7 @@ const Header: FC = () => {
           aria-label="Abrir navegação"
           aria-expanded={isMenuOpen}
           onClick={handleToggleMenu}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-brand-gold hover:text-brand-gold md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-gold/30 text-white transition hover:border-brand-gold hover:text-brand-gold md:hidden"
         >
           <span className="relative h-3.5 w-4"> 
             <span
@@ -83,7 +83,7 @@ const Header: FC = () => {
           isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         } transition-opacity duration-300`}
       >
-        <div className="mx-6 mb-6 flex flex-col gap-3 rounded-2xl border border-white/10 bg-charcoal/95 p-6 text-sm font-semibold uppercase tracking-[0.25em] text-neutral-200 shadow-lg">
+        <div className="mx-6 mb-6 flex flex-col gap-3 rounded-2xl border border-brand-gold/20 bg-night/95 p-6 text-sm font-semibold uppercase tracking-[0.25em] text-brand-sand/80 shadow-lg">
           {navItems.map((item) => (
             <a
               key={item.href}

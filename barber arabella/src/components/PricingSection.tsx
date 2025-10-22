@@ -12,19 +12,19 @@ interface PricingItem {
 
 const pricing: PricingItem[] = [
   {
-    title: 'Classic Cut',
+    title: 'Corte Clássico Premium',
     price: 'R$ 95',
     description: 'Corte completo com ritual de finalização e styling.',
     features: ['Consultoria rápida de imagem', 'Finalização com produtos premium', 'Bebida cortesia'],
   },
   {
-    title: 'Royal Beard',
+    title: 'Barba de Assinatura',
     price: 'R$ 75',
     description: 'Barba modelada com navalha quente e óleos essenciais.',
     features: ['Toalha aromática', 'Hidratação nutritiva', 'Linha completa Arabella Oils'],
   },
   {
-    title: 'Combo Experience',
+    title: 'Combo Experiência Arabella',
     price: 'R$ 189',
     description: 'Corte + barba + detox facial com tempo estendido no lounge.',
     features: ['Massagem craniana relaxante', 'Drink autoral', 'Acesso à barbearia smart lounge'],
@@ -33,7 +33,7 @@ const pricing: PricingItem[] = [
 ]
 
 const PricingSection: FC = () => (
-  <section id="precos" className="scroll-mt-24 bg-charcoal-soft py-24">
+  <section id="precos" className="scroll-mt-24 bg-charcoal-soft/80 py-24">
     <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
       <SectionTitle
         subtitle="Investimento"
@@ -44,21 +44,23 @@ const PricingSection: FC = () => (
         {pricing.map((item) => (
           <article
             key={item.title}
-            className={`flex h-full flex-col gap-6 rounded-3xl border bg-black/40 p-8 text-left transition duration-300 ${
+            className={`flex h-full flex-col gap-6 rounded-3xl border bg-night/70 p-8 text-left transition duration-300 ${
               item.highlight
-                ? 'border-brand-gold/80 bg-brand-gold/15 shadow-glow'
-                : 'border-white/10 hover:-translate-y-1 hover:border-brand-gold/60 hover:bg-brand-gold/10'
+                ? 'border-brand-gold/80 bg-brand-gold/20 text-night shadow-glow'
+                : 'border-brand-gold/20 hover:-translate-y-1 hover:border-brand-gold/60 hover:bg-night/60'
             }`}
           >
             <div>
-              <h3 className="font-display text-2xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm text-neutral-300">{item.description}</p>
+              <h3 className={`font-display text-2xl font-semibold ${item.highlight ? 'text-night' : 'text-white'}`}>{item.title}</h3>
+              <p className={`mt-2 text-sm ${item.highlight ? 'text-night/80' : 'text-brand-sand/80'}`}>{item.description}</p>
             </div>
             <div>
-              <span className="text-3xl font-semibold text-brand-gold">{item.price}</span>
-              <span className="ml-2 text-xs uppercase tracking-[0.3em] text-neutral-400">por sessão</span>
+              <span className={`text-3xl font-semibold ${item.highlight ? 'text-night' : 'text-brand-gold'}`}>{item.price}</span>
+              <span className={`ml-2 text-xs uppercase tracking-[0.3em] ${item.highlight ? 'text-night/70' : 'text-brand-sand/70'}`}>
+                por sessão
+              </span>
             </div>
-            <ul className="space-y-3 text-sm text-neutral-200">
+            <ul className={`space-y-3 text-sm ${item.highlight ? 'text-night/80' : 'text-brand-sand/80'}`}>
               {item.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
                   <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-brand-gold/70" aria-hidden="true" />
@@ -70,8 +72,8 @@ const PricingSection: FC = () => (
               href="#contato"
               className={`mt-auto inline-flex items-center justify-center rounded-full border px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] transition ${
                 item.highlight
-                  ? 'border-transparent bg-brand-gold text-black hover:bg-brand-gold/90'
-                  : 'border-brand-gold/40 text-brand-gold hover:border-brand-gold hover:bg-brand-gold/10 hover:text-white'
+                  ? 'border-transparent bg-night text-brand-gold hover:bg-night/90'
+                  : 'border-brand-gold/40 text-brand-gold hover:border-brand-gold hover:bg-night/60 hover:text-white'
               }`}
             >
               Fale com a equipe

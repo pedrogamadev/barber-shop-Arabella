@@ -19,7 +19,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ subtitle, title, descripti
     <div className={`flex w-full max-w-3xl flex-col gap-4 ${alignment}`}>
       <span className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-gold">{subtitle}</span>
       <h2 className="font-display text-3xl font-semibold leading-tight text-white sm:text-4xl">{title}</h2>
-      {description ? <p className="text-base text-neutral-300">{description}</p> : null}
+      {description ? <p className="text-base text-brand-sand/80">{description}</p> : null}
     </div>
   )
 }

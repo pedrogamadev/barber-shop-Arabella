@@ -36,7 +36,7 @@ const galleryItems = [
 ]
 
 const GallerySection: FC = () => (
-  <section id="galeria" className="scroll-mt-24 bg-charcoal-soft py-24">
+  <section id="galeria" className="scroll-mt-24 bg-charcoal-soft/80 py-24">
     <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
       <SectionTitle
         subtitle="Portfólio"
@@ -47,14 +47,14 @@ const GallerySection: FC = () => (
         {galleryItems.map((item) => (
           <figure
             key={item.id}
-            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-lg"
+            className="group relative overflow-hidden rounded-3xl border border-brand-gold/20 bg-night/70 shadow-lg"
           >
             <img
               src={item.src}
               alt={item.alt}
               className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-black/70 px-5 py-3 text-xs uppercase tracking-[0.3em] text-neutral-200">
+            <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-night/80 px-5 py-3 text-xs uppercase tracking-[0.3em] text-brand-sand/80">
               <span>Estúdio criativo</span>
               <span className="text-brand-gold">Arabella</span>
             </figcaption>

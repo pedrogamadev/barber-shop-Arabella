@@ -8,11 +8,12 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        night: '#050507',
-        charcoal: '#121218',
-        'charcoal-soft': '#1a1b21',
+        night: '#171C28',
+        charcoal: '#1E2433',
+        'charcoal-soft': '#222A3B',
         brand: {
-          gold: '#d4a85f',
+          gold: '#B79A77',
+          sand: '#F2E9DF',
         },
       },
       fontFamily: {
@@ -20,7 +21,7 @@ export default defineConfig({
         body: ['"Work Sans"', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 25px 60px -20px rgba(212, 168, 95, 0.45)',
+        glow: '0 25px 60px -20px rgba(183, 154, 119, 0.45)',
       },
       borderRadius: {
         '3xl': '1.75rem',

@@ -5,14 +5,14 @@ import heroImage from '../assets/hero.avif'
 const Hero: FC = () => (
   <section
     id="inicio"
-    className="relative flex min-h-screen items-center justify-center overflow-hidden bg-night text-white"
+    className="relative flex min-h-screen items-center justify-center overflow-hidden bg-night/95 text-white"
   >
     <img
       src={heroImage}
       alt="Ferramentas de barbearia douradas sobre fundo escuro"
       className="absolute inset-0 h-full w-full object-cover brightness-[0.55]"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black" aria-hidden="true" />
+    <div className="absolute inset-0 bg-gradient-to-b from-night/80 via-charcoal/90 to-night" aria-hidden="true" />
     <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-8 px-6 text-center">
       <span className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-gold">Barbearia Boutique</span>
       <h1 className="font-display text-4xl font-semibold leading-tight sm:text-6xl">
@@ -36,22 +36,22 @@ const Hero: FC = () => (
           Fale com a equipe
         </a>
       </div>
-      <div className="grid w-full grid-cols-1 gap-6 text-left text-xs uppercase tracking-[0.3em] text-neutral-400 sm:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+      <div className="grid w-full grid-cols-1 gap-6 text-left text-xs uppercase tracking-[0.3em] text-brand-sand/70 sm:grid-cols-3">
+        <div className="rounded-2xl border border-brand-gold/30 bg-night/70 p-4 backdrop-blur">
           <p className="font-semibold text-white">Tecnologia &amp; Tradição</p>
-          <span className="mt-2 block text-[0.7rem] normal-case text-neutral-300">
+          <span className="mt-2 block text-[0.7rem] normal-case text-brand-sand/80">
             Consultoria de imagem e grooming com ferramentas premium e diagnóstico digital.
           </span>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+        <div className="rounded-2xl border border-brand-gold/30 bg-night/70 p-4 backdrop-blur">
           <p className="font-semibold text-white">Ambiente Exclusivo</p>
-          <span className="mt-2 block text-[0.7rem] normal-case text-neutral-300">
+          <span className="mt-2 block text-[0.7rem] normal-case text-brand-sand/80">
             Lounge reservado, carta de bebidas selecionadas e playlists assinadas por DJs convidados.
           </span>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+        <div className="rounded-2xl border border-brand-gold/30 bg-night/70 p-4 backdrop-blur">
           <p className="font-semibold text-white">Profissionais Autênticos</p>
-          <span className="mt-2 block text-[0.7rem] normal-case text-neutral-300">
+          <span className="mt-2 block text-[0.7rem] normal-case text-brand-sand/80">
             Barbeiros especialistas em cortes autorais e barbas esculpidas sob medida.
           </span>
         </div>

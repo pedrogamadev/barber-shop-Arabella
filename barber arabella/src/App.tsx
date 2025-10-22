@@ -12,7 +12,7 @@ import TeamSection from './components/TeamSection'
 import TestimonialsSection from './components/TestimonialsSection'
 
 const App: FC = () => (
-  <div className="flex min-h-screen flex-col bg-night font-body text-white">
+  <div className="flex min-h-screen flex-col bg-gradient-to-b from-night via-charcoal-soft to-night font-body text-white">
     <Header />
     <main className="flex-1">
       <Hero />
