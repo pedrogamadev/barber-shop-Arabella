@@ -1,7 +1,6 @@
 import type { FC } from 'react'
 
 import AboutSection from './components/AboutSection'
-import BookingSection from './components/BookingSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import GallerySection from './components/GallerySection'
@@ -23,7 +22,6 @@ const App: FC = () => (
       <TeamSection />
       <PricingSection />
       <TestimonialsSection />
-      <BookingSection />
       <ContactSection />
     </main>
     <Footer />

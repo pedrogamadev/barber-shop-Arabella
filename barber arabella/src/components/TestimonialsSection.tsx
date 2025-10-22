@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     role: 'Lead Developer @ Orbit Studios',
   },
   {
-    quote: '“Agendar pelo site é simples, e o ritual premium vale cada minuto. Já virei cliente fiel.”',
+    quote: '“O atendimento digital facilita minha rotina, e o ritual premium vale cada minuto. Já virei cliente fiel.”',
     author: 'Gabriel Souza',
     role: 'Founder @ Indie Games Co.',
   },
@@ -96,8 +96,8 @@ const TestimonialsSection: FC = () => (
         <div className="flex flex-col justify-center gap-8 rounded-3xl border border-white/10 bg-charcoal-soft/80 p-10">
           <h3 className="font-display text-2xl font-semibold text-white">Nossa performance</h3>
           <p className="text-sm text-neutral-300">
-            Resultados baseados em dados fictícios para ilustrar indicadores que reforçam a confiança do visitante no momento de
-            agendar.
+            Resultados baseados em dados fictícios para ilustrar indicadores que reforçam a confiança do visitante na hora de
+            escolher a barbearia.
           </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {stats.map((stat) => (

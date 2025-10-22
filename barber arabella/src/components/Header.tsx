@@ -1,5 +1,7 @@
 import { useState, type FC } from 'react'
 
+import logo from '../assets/mustache.png'
+
 const navItems = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
@@ -27,9 +29,14 @@ const Header: FC = () => {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#inicio"
-          className="font-display text-xl font-semibold uppercase tracking-[0.4em] text-brand-gold transition hover:text-brand-gold/80"
+          className="flex items-center"
         >
-          As’ Arabella <span className="text-white">.Dev</span>
+          <img
+            src={logo}
+            alt="Logotipo As’ Arabella .Dev"
+            className="h-12 w-12 rounded-full border border-brand-gold/40 object-cover shadow-glow"
+          />
+          <span className="sr-only">As’ Arabella .Dev</span>
         </a>
 
         <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-200 md:flex">
@@ -42,12 +49,6 @@ const Header: FC = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href="#agendamento"
-            className="rounded-full bg-brand-gold px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-brand-gold/90"
-          >
-            Agendar
-          </a>
         </nav>
 
         <button
@@ -93,13 +94,6 @@ const Header: FC = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href="#agendamento"
-            className="rounded-lg bg-brand-gold px-3 py-2 text-center text-black hover:bg-brand-gold/90"
-            onClick={handleCloseMenu}
-          >
-            Agendar Corte
-          </a>
         </div>
       </nav>
     </header>

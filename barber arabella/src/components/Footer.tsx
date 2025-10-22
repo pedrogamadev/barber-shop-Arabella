@@ -14,8 +14,8 @@ const Footer: FC = () => (
         <a href="#servicos" className="transition hover:text-brand-gold">
           Serviços
         </a>
-        <a href="#agendamento" className="transition hover:text-brand-gold">
-          Agendar
+        <a href="#contato" className="transition hover:text-brand-gold">
+          Contato
         </a>
       </div>
     </div>

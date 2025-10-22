@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import mustacheIcon from '../assets/mustache.png'
+import logo from '../assets/mustache.png'
 import SectionTitle from './SectionTitle'
 
 const AboutSection: FC = () => (
@@ -15,7 +15,7 @@ const AboutSection: FC = () => (
       />
       <div className="relative flex justify-center md:justify-end">
         <div className="relative flex h-60 w-60 items-center justify-center overflow-hidden rounded-full border border-brand-gold/30 bg-black/40 shadow-glow">
-          <img src={mustacheIcon} alt="Ícone de bigode estilizado" className="h-32 w-32 object-contain" />
+          <img src={logo} alt="Logotipo As’ Arabella .Dev" className="h-full w-full object-cover" />
         </div>
         <div className="absolute -left-6 -top-6 hidden h-20 w-20 rounded-3xl border border-brand-gold/40 bg-brand-gold/10 blur-lg md:block" />
         <div className="absolute -bottom-10 -right-10 hidden h-24 w-24 rounded-full border border-brand-gold/20 bg-brand-gold/5 blur-xl md:block" />

@@ -24,16 +24,16 @@ const Hero: FC = () => (
       </p>
       <div className="flex flex-col items-center gap-6 sm:flex-row">
         <a
-          href="#agendamento"
+          href="#servicos"
           className="inline-flex items-center justify-center rounded-full bg-brand-gold px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-black transition duration-300 hover:bg-brand-gold/90 hover:shadow-glow"
         >
-          Agendar Corte
+          Explorar serviços
         </a>
         <a
-          href="#servicos"
+          href="#contato"
           className="text-sm font-semibold uppercase tracking-[0.3em] text-neutral-200 transition-colors duration-300 hover:text-brand-gold"
         >
-          Conheça os serviços
+          Fale com a equipe
         </a>
       </div>
       <div className="grid w-full grid-cols-1 gap-6 text-left text-xs uppercase tracking-[0.3em] text-neutral-400 sm:grid-cols-3">

@@ -1,6 +1,5 @@
 import type { FC } from 'react'
 
-import mustacheIcon from '../assets/mustache.png'
 import SectionTitle from './SectionTitle'
 
 const teamMembers = [
@@ -8,16 +7,19 @@ const teamMembers = [
     name: 'Arthur Nogueira',
     role: 'Master Barber',
     bio: 'Especialista em cortes estruturados, transições degradê e tendências internacionais.',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=640&q=80',
   },
   {
     name: 'Sofia Martins',
     role: 'Stylist & Grooming Coach',
     bio: 'Cuida da experiência do cliente com tratamentos spa, colorações e consultoria de imagem.',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80',
   },
   {
     name: 'Henrique Dias',
     role: 'Beard Architect',
     bio: 'Designer de barbas e bigodes com técnicas de visagismo e modelagem personalizada.',
+    image: 'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=640&q=80',
   },
 ]
 
@@ -33,10 +35,14 @@ const TeamSection: FC = () => (
         {teamMembers.map((member) => (
           <article
             key={member.name}
-            className="flex h-full flex-col items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-brand-gold/70 hover:bg-brand-gold/10"
+            className="group flex h-full flex-col items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-brand-gold/70 hover:bg-brand-gold/10"
           >
-            <div className="relative flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-brand-gold/40 bg-black/70 shadow-lg">
-              <img src={mustacheIcon} alt="Avatar conceitual" className="h-16 w-16 object-contain" />
+            <div className="relative h-32 w-32 overflow-hidden rounded-full border border-brand-gold/40 bg-black/70 shadow-lg">
+              <img
+                src={member.image}
+                alt={`Retrato profissional de ${member.name}`}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="font-display text-xl font-semibold text-white">{member.name}</h3>

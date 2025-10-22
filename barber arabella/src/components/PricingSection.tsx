@@ -37,7 +37,7 @@ const PricingSection: FC = () => (
     <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
       <SectionTitle
         subtitle="Investimento"
-        title="Planos transparentes para agendar sem burocracia"
+        title="Planos transparentes para personalizar sua experiência"
         description="Valores base para apresentação. Ajuste os pacotes conforme a estratégia da sua barbearia."
       />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -67,14 +67,14 @@ const PricingSection: FC = () => (
               ))}
             </ul>
             <a
-              href="#agendamento"
+              href="#contato"
               className={`mt-auto inline-flex items-center justify-center rounded-full border px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] transition ${
                 item.highlight
                   ? 'border-transparent bg-brand-gold text-black hover:bg-brand-gold/90'
                   : 'border-brand-gold/40 text-brand-gold hover:border-brand-gold hover:bg-brand-gold/10 hover:text-white'
               }`}
             >
-              Reservar agora
+              Fale com a equipe
             </a>
           </article>
         ))}
